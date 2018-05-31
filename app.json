@@ -6,7 +6,7 @@
     "env": {
       "BLOCKCHAIN_SERVICE_URL": {
         "description": "Use the Heroku App URL that has the Blockchain Add-On deployed",
-        "value":"http://localhost"
+        "value":"http://blockchainbeta.herokuapp.com/blockchain"
         
       }
     }
