@@ -1,0 +1,13 @@
+{
+    "name": "SMART CONTRACT REST WRAPPER",
+    "description": "SMART CONTRACT REST API",
+    "repository": "https://github.com/objectfrontiergit/restWrapper.git",
+    "keywords": ["node", "express", "web3", "ethereum" ],
+    "env": {
+      "BLOCKCHAIN_SERVICE_URL": {
+        "description": "Use the Heroku App URL that has the Blockchain Add-On deployed",
+        "value":"http://localhost"
+        
+      }
+    }
+  }

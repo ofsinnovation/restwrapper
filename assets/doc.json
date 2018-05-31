@@ -1,0 +1,183 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "OFS Private Blockchain API Documentation",
+		"version": "1.0.0",
+		"title": "OFS Private Blockchain",
+		"termsOfService": "http://swagger.io/terms/"
+	},
+	"basePath": "/",
+	"tags": [
+		{
+			"name": "Smart Contract",
+			"description": "Ethereum Smart Contract"
+		}
+	],
+	"paths": {
+		"/{contractId}/{key}": {
+			"get": {
+				"tags": [
+					"Smart Contract"
+				],
+				"summary": "get data From Ledger",
+				"description": "Use this service to get data",
+				"produces": [
+					"application/json"
+                ],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"contractId",
+                        "required": true,
+						"type":"string",
+						"example":"0xa5597b9cf1f54e8d02ebad1bc3b7cda06abb842d"
+				   },
+				   {
+					   "in": "path",
+					   "name":"key",
+					   "required":true,
+					   "type": "string",
+					   "example":"newtest",
+					   "description":"Data saved against key in the ledger"
+				   }
+                ],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type":"Object",
+							"properties":{
+							}		
+						}
+					}
+				}
+			},
+			"post":{
+				"tags":["Smart Contract"],
+				"summary": "Write data to ledger using smart contract",
+					"description": "Use this service to create data",
+					"produces": [
+						"application/json"
+					],
+					"consumes":[
+						"application/json"
+					],
+					"parameters":[
+						{
+							"in":"path",
+							"name":"contractId",
+							"required": true,
+							"type":"string",
+							"example":"0xa5597b9cf1f54e8d02ebad1bc3b7cda06abb842d",
+							"description":"Smart contract id"
+					   },
+					   {
+						   "in": "path",
+						   "name":"key",
+						   "required":true,
+						   "type": "string",
+						   "example":"newtest",
+						   "description":"Data saved against key in the ledger"
+					   },
+					   {
+							"in": "body",
+							"name":"body",
+							"require":true,
+							"description":"Request body",
+							"schema":{
+								"type":"Object",
+								"properties":{
+								"value":{
+								"type":"String",
+								"example":"Hello How are you"
+								}
+									
+								}
+	
+							}
+						}
+					],
+					"responses":{
+						"201":{
+							"description":"created",
+							"schema":{
+								"type":"string",
+								"example":"0xebeb24053ae99f248ff6815b02367e47130c19cbe13a63dcfc71f3a70e29ba08"
+							}
+						}
+					}
+	
+			}
+			
+		},
+		"/{contractId}/{key}/{methodName}":{
+			"put":{
+				
+				"tags":["Smart Contract"],
+				"summary": "Change existing ledger data using smart contract",
+					"description": "Use this service to update data",
+					"produces": [
+						"application/json"
+					],
+					"consumes":[
+						"application/json"
+					],
+					"parameters":[
+						{
+							"in":"path",
+							"name":"contractId",
+							"required": true,
+							"type":"string",
+							"example":"0xa5597b9cf1f54e8d02ebad1bc3b7cda06abb842d",
+							"description":"Smart contract id"
+					   },
+					   {
+						   "in": "path",
+						   "name":"key",
+						   "required":true,
+						   "type": "string",
+						   "example":"update",
+						   "description":"Data saved against key in the ledger"
+					   },
+					   {
+							"in": "path",
+							"name":"methodName",
+							"required":true,
+							"type": "string",
+							"example":"test",
+							"description":"update data against key in the ledger"
+						},
+					   {
+							"in": "body",
+							"name":"body",
+							"require":true,
+							"description":"Request body",
+							"schema":{
+								"type":"Object",
+								"properties":{
+								"value":{
+								"type":"String",
+								"example":"Hello, How you doing"
+								}
+									
+								}
+	
+							}
+						}
+					],
+					"responses":{
+						"200":{
+							"description":"Ok",
+							"schema":{
+							 "type":"string",
+							 "example":"0x77e423ccaa257a1e589daaaaeb4fb17323f5b37fa31bf2535b170117c6d5fc07"
+								
+							}
+						}
+					}
+
+			}
+		}
+	}
+
+}

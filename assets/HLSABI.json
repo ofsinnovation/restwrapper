@@ -1,0 +1,113 @@
+[
+	{
+	  "constant": false,
+	  "inputs": [
+		{
+		  "name": "key",
+		  "type": "string"
+		},
+		{
+		  "name": "value",
+		  "type": "string"
+		}
+	  ],
+	  "name": "write",
+	  "outputs": [],
+	  "payable": false,
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "constant": true,
+	  "inputs": [
+		{
+		  "name": "key",
+		  "type": "string"
+		}
+	  ],
+	  "name": "read",
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "string"
+		},
+		{
+		  "name": "",
+		  "type": "string"
+		},
+		{
+		  "name": "",
+		  "type": "uint256"
+		},
+		{
+		  "name": "",
+		  "type": "uint256"
+		},
+		{
+		  "name": "",
+		  "type": "string"
+		}
+	  ],
+	  "payable": false,
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "constant": false,
+	  "inputs": [
+		{
+		  "name": "functionName",
+		  "type": "string"
+		},
+		{
+		  "name": "key",
+		  "type": "string"
+		},
+		{
+		  "name": "value",
+		  "type": "string"
+		}
+	  ],
+	  "name": "executeFunction",
+	  "outputs": [],
+	  "payable": false,
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "anonymous": false,
+	  "inputs": [
+		{
+		  "indexed": false,
+		  "name": "",
+		  "type": "string"
+		}
+	  ],
+	  "name": "FunctionCalled",
+	  "type": "event"
+	},
+	{
+	  "anonymous": false,
+	  "inputs": [
+		{
+		  "indexed": false,
+		  "name": "",
+		  "type": "string"
+		}
+	  ],
+	  "name": "FunctionCalledWithParam",
+	  "type": "event"
+	},
+	{
+	  "anonymous": false,
+	  "inputs": [
+		{
+		  "indexed": false,
+		  "name": "",
+		  "type": "bool"
+		}
+	  ],
+	  "name": "MatchingFunctionFound",
+	  "type": "event"
+	}
+  ]
